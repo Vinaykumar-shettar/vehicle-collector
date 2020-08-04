@@ -10,7 +10,7 @@ TEST(COLLECT, motor_temp_telematics_is_converted_into_one_inventory) {
 TEST(COLLECT, battery_soc__telematics_is_converted_into_one_inventory) {
     Telematics t = {10, BATTERY_SOC, 50.5};
     Vehicle v = telemetrics_to_inventory(t);
-    ASSERT_EQ(v.battery_pc, 50.5);
+    ASSERT_EQ(v.battery_soc, 50.5);
 }
 
 TEST(COLLECT, battery_temp_telematics_is_converted_into_one_inventory) {
